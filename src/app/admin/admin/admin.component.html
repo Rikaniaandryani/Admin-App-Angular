@@ -1,0 +1,37 @@
+<ng-container>
+    <mat-toolbar class="example-header" color="">
+        <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>&nbsp;
+        <span>Admin My Angular</span>
+        <div class="uk-width-expand"></div>
+        <span>Admin</span>
+    </mat-toolbar>
+    <!-- start sidenav -->
+    <mat-sidenav-container class="example-container">
+        <mat-sidenav #sidenav mode="side"  [position]="'start'" [opened]="'true'" [fixedInViewport]="true" [fixedTopGap]="65" [fixedBottomGap]="00" class="sidenav-left">
+          <!-- mat nav list -->
+            <mat-nav-list>
+                <mat-list-item routerLink="/admin/dashboard">
+                    <mat-icon matListIcon>dashboard</mat-icon>
+                    <h3 matLine>
+                        Dashboard
+                    </h3>
+                </mat-list-item>
+                <mat-list-item routerLink="/admin/product">
+                    <mat-icon matListIcon>camera_enhance</mat-icon>
+                    <h3 matLine>
+                        Product
+                    </h3>
+                </mat-list-item>
+            </mat-nav-list>
+          <!-- end mat nav list -->
+        </mat-sidenav>
+      
+        <mat-sidenav-content style="padding:20px;height: 100vh;">
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+      
+    <!-- end sidenav -->
+
+</ng-container>
+

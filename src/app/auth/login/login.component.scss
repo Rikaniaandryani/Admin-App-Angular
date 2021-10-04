@@ -1,0 +1,19 @@
+.login{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    .card{
+        box-shadow: 2px 1px 5px grey;
+        .card-title{
+            text-align: center;
+        }
+        
+        .button-submit{
+            displaay: flex;
+            .login-btn{
+                float: right;
+            }
+        }
+    }
+}
